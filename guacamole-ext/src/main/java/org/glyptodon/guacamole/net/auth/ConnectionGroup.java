@@ -31,7 +31,7 @@ import org.glyptodon.guacamole.GuacamoleException;
  *
  * @author James Muehlner
  */
-public interface ConnectionGroup extends Identifiable, Connectable {
+public interface ConnectionGroup extends Identifiable, Connectable, Groupable {
   
     /**
      * All legal types of connection group.
@@ -69,24 +69,6 @@ public interface ConnectionGroup extends Identifiable, Connectable {
      */
     public void setName(String name);
 
-    /**
-     * Returns the unique identifier of the parent ConnectionGroup for
-     * this ConnectionGroup.
-     * 
-     * @return The unique identifier of the parent ConnectionGroup for
-     * this ConnectionGroup.
-     */
-    public String getParentIdentifier();
-
-    /**
-     * Sets the unique identifier of the parent ConnectionGroup for
-     * this ConnectionGroup.
-     * 
-     * @param parentIdentifier The unique identifier of the parent 
-     * ConnectionGroup for this ConnectionGroup.
-     */
-    public void setParentIdentifier(String parentIdentifier);
-    
     /**
      * Set the type of this ConnectionGroup.
      *
